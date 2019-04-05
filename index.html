@@ -47,13 +47,13 @@
 
 
 <div class="tela"> 
-<p id="t1"align="center" style="font-size:60px"></p>
+<p id="tela1"align="center" style="font-size:60px"></p>
 </div>
 
 
 </div>
 <div class="controle">
-<p id="te1"align="center" style="font-size:60px" ></p>
+<p id="console1"align="center" style="font-size:60px" ></p>
 <button class="button" id="botao1" onclick="p01r01()" >CLARO</button>
 <br>
 <button class="button" id="botao2" onclick="p01r02()" >NÃO</button>
@@ -63,12 +63,27 @@
 <script>
 //////////////////////////////////////variaveis////////////////////////////////////
 var afo = 1;
-
 //////////////////////////////////////////////TEXTO FICHA///////////////////
-document.getElementById("t1").innerHTML = "SHAIPE BRODERS v." + afo;
+document.getElementById("tela1").innerHTML = "SHAIPE BRODERS v." + afo;
 //////////////////////////////////////////////TEXTO EQUIPAMENTO///////////////////
-document.getElementById("te1").innerHTML = "VOCE TOMOU UM CAFEH DA MANHA REFORSSADO?" ;
+document.getElementById("console1").innerHTML = "VOCE TOMOU UM CAFEH DA MANHA REFORSSADO?" ;
+////////////////FUNCOES///
+//////p1
+function p01r01(){
+document.getElementById("console1").innerHTML = "entao eh hora de malhar";
+document.getElementById("botao1").setAttribute("onclick","");
+document.getElementById("botao1").innerHTML = "boua fera";
+document.getElementById("botao2").setAttribute("onclick","");
+document.getElementById("botao2").innerHTML = "boua fera";
 
+}
+function p01r02(){
+document.getElementById("console1").innerHTML = "GAME OVER!! voce eh muinto fracasado!";
+document.getElementById("botao1").setAttribute("onclick","");
+document.getElementById("botao1").innerHTML = "lixento...";
+document.getElementById("botao2").setAttribute("onclick","");
+document.getElementById("botao2").innerHTML = "lixento...";
+}
 
 
 </script>
