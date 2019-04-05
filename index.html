@@ -72,30 +72,41 @@
 
 <script>
 //////////////////////////////////////variaveis////////////////////////////////////
-var afo = 1;
-//////////////////////////////////////////////TEXTO FICHA///////////////////
-document.getElementById("tela1").innerHTML = "SHAIPE BRODERS v." + afo;
-document.getElementById("tela2").innerHTML = "FORSA     10";
-document.getElementById("tela3").innerHTML = "Aparensia 10";
-document.getElementById("tela4").innerHTML = "Saude     10";
+
+var afo = 10;
+var aao = 10;
+var aso = 10;
+//////////////////////////////////////////////TEXTO FICHA esttico inciial + dinamico
+document.getElementById("tela1").innerHTML = "SHAIPE BRODERS v.1";
+document.getElementById("tela2").innerHTML = "FORSA " + afo;
+document.getElementById("tela3").innerHTML = "Aparensia " +aao;
+document.getElementById("tela4").innerHTML = "Saude " + aso;
+function ficha(){
+document.getElementById("tela1").innerHTML = "SHAIPE BRODERS v.1";
+document.getElementById("tela2").innerHTML = "FORSA " + afo;
+document.getElementById("tela3").innerHTML = "Aparensia " +aao;
+document.getElementById("tela4").innerHTML = "Saude " + aso;
+}
 //////////////////////////////////////////////TEXTO EQUIPAMENTO///////////////////
 document.getElementById("console1").innerHTML = "VOCE TOMOU UM CAFEH DA MANHA REFORSSADO?" ;
 ////////////////FUNCOES///
 //////p1
 function p01r01(){
-document.getElementById("console1").innerHTML = "entao eh hora de malhar";
+document.getElementById("console1").innerHTML = "PORRA ENTAO VAMOS MALHAR";
 document.getElementById("botao1").setAttribute("onclick","");
 document.getElementById("botao1").innerHTML = "boua fera";
 document.getElementById("botao2").setAttribute("onclick","");
 document.getElementById("botao2").innerHTML = "boua fera";
-
+afo+=1;aao+=1;aso+=1;ficha();
 }
+
 function p01r02(){
 document.getElementById("console1").innerHTML = "GAME OVER!! voce eh muinto fracasado!";
 document.getElementById("botao1").setAttribute("onclick","");
 document.getElementById("botao1").innerHTML = "lixento...";
 document.getElementById("botao2").setAttribute("onclick","");
 document.getElementById("botao2").innerHTML = "lixento...";
+afo+=-5;aao+=-5;aso+=-5;ficha();
 }
 
 
