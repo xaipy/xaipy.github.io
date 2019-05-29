@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -28,6 +29,7 @@
   padding: 0px;
   height: 40%;
   width: 100%;
+  line-height: 0.9;
 } 
 .controle {
   font-size: ;
@@ -40,22 +42,16 @@
   padding: 0px;
   height: 60%;
   width: 100%;
-
-
 </style>
 </head>
 <body>
-
-
-
 <div class="tela"> 
-<p id="tela1"align="center" style="font-size:60px"></p>
-<p id="tela2"align="left" style="font-size:40px"></p>
+<p id="tela1"align="center" style="font-size:60px" ></p>
+<p id="tela2"align="left" style="font-size:40px" ></p>
 <p id="tela3"align="left" style="font-size:40px"></p>
 <p id="tela4"align="left" style="font-size:40px"></p>
+<p id="tela5"align="left" style="font-size:30px"></p>
 </div>
-
-
 </div>
 <div class="controle">
 <p id="console1"align="center" style="font-size:60px" ></p>
@@ -65,41 +61,52 @@
 <br>
 <br>
 <br>
-
 <button class="button" id="botao2" onclick="p01r02()" >NÃO</button>
-
+<br>
+<br>
+<br>
+<br>
+<br>
+<button class="button" id="botao3" onclick="p01r02()" style="visibility:hidden">NÃO</button>
 </div>
-
 <script>
 //////////////////////////////////////variaveis////////////////////////////////////
-
 var afo = 10;
 var aao = 10;
 var aso = 10;
+var wey = 0;
+var grana = 5;
+////variaveis quest
+aifone=1;
 //////////////////////////////////////////////TEXTO FICHA esttico inciial + dinamico
 document.getElementById("tela1").innerHTML = "SHAIPE BRODERS v.1";
 document.getElementById("tela2").innerHTML = "FORSA " + afo;
 document.getElementById("tela3").innerHTML = "Aparensia " +aao;
 document.getElementById("tela4").innerHTML = "Saude " + aso;
+document.getElementById("tela5").innerHTML = "Bufunfa: " + grana + " Way protei: " + wey;
 function ficha(){
 document.getElementById("tela1").innerHTML = "SHAIPE BRODERS v.1";
 document.getElementById("tela2").innerHTML = "FORSA " + afo;
 document.getElementById("tela3").innerHTML = "Aparensia " +aao;
 document.getElementById("tela4").innerHTML = "Saude " + aso;
+document.getElementById("tela5").innerHTML = "Bufunfa: " + grana + " Way protei: " + wey;
 }
 //////////////////////////////////////////////TEXTO EQUIPAMENTO///////////////////
 document.getElementById("console1").innerHTML = "VOCE TOMOU UM CAFEH DA MANHA REFORSSADO?" ;
 ////////////////FUNCOES///
+
 //////p1
 function p01r01(){
-document.getElementById("console1").innerHTML = "PORRA ENTAO VAMOS MALHAR";
-document.getElementById("botao1").setAttribute("onclick","");
-document.getElementById("botao1").innerHTML = "boua fera";
-document.getElementById("botao2").setAttribute("onclick","");
-document.getElementById("botao2").innerHTML = "boua fera";
+document.getElementById("console1").innerHTML = "PORRA ENTAO VAMOS MALHAR! O que você vai levar pra academia?";
+document.getElementById("botao1").setAttribute("onclick"," p02r01()");
+document.getElementById("botao1").innerHTML = "regata fininha";
+document.getElementById("botao2").setAttribute("onclick","p02r02()");
+document.getElementById("botao2").innerHTML = "way protei";
+document.getElementById("botao3").setAttribute("onclick","p02r03()");
+document.getElementById("botao3").innerHTML = "aifone para selfes";
+document.getElementById("botao3").setAttribute("style","visibility:show");
 afo+=1;aao+=1;aso+=1;ficha();
 }
-
 function p01r02(){
 document.getElementById("console1").innerHTML = "GAME OVER!! voce eh muinto fracasado!";
 document.getElementById("botao1").setAttribute("onclick","");
@@ -108,19 +115,58 @@ document.getElementById("botao2").setAttribute("onclick","");
 document.getElementById("botao2").innerHTML = "lixento...";
 afo+=-5;aao+=-5;aso+=-5;ficha();
 }
-
-
+/////////////p2
+function p02r01(){
+document.getElementById("console1").innerHTML = "Você ainda tá muinto frango pra usar a regata fininha...(-1 aparensia). No caminho pra academia um mendigo aparece armado com um tijolo baiano de 8 furo e diz: pasa a grana plaiso.";
+aao+=-1;ficha();
+document.getElementById("botao1").setAttribute("onclick"," p03r01()");
+document.getElementById("botao1").innerHTML = "sento a porrada no mindigo";
+document.getElementById("botao2").setAttribute("onclick","p03r02()");
+document.getElementById("botao2").innerHTML = "entrego a grana";
+document.getElementById("botao3").setAttribute("style","visibility:hidden");
+}
+function p02r02(){
+document.getElementById("console1").innerHTML = "BOUA melior sta preparado. No caminho pra academia um mendigo aparece armado com um tijolo baiano de 8 furo e diz: pasa a grana plaiso.";
+wey+=1;ficha();
+document.getElementById("botao1").setAttribute("onclick"," p03r01()");
+document.getElementById("botao1").innerHTML = "sento a porrada no mindigo";
+document.getElementById("botao2").setAttribute("onclick","p03r02()");
+document.getElementById("botao2").innerHTML = "entrego a grana";
+document.getElementById("botao3").setAttribute("style","visibility:hidden");
+}
+function p02r03(){
+document.getElementById("console1").innerHTML = "Voce vai distraido pra academia fasendo un tercero selfe scrito BORA MALHAR mas nem comesso ainda. Um mendigo selvage aparese do nada e te da uma tijolada e leva sua grana e o aifone.";
+grana=0;aifone=0;aso+=-3;ficha();
+document.getElementById("botao1").setAttribute("onclick"," p04r01()");
+document.getElementById("botao1").innerHTML = "continuar";
+document.getElementById("botao2").setAttribute("style","visibility:hidden");
+document.getElementById("botao3").setAttribute("style","visibility:hidden");
+}
+///////////p3
+function p03r01(){
+document.getElementById("console1").innerHTML = "Ta locao mermao? vc ta framgo aimda. mindigo te da um pau e leva sua grana.";
+aso+=-3;grana=0;ficha();
+document.getElementById("botao1").setAttribute("onclick"," p04r01()");
+document.getElementById("botao1").innerHTML = "continuar para academia";
+document.getElementById("botao2").setAttribute("style","visibility:hidden");
+document.getElementById("botao3").setAttribute("style","visibility:hidden");
+}
+function p03r02(){
+document.getElementById("console1").innerHTML = "O sacana pega os dolars e sai fora. Ese mindigo nau perde por espera.";
+grana=0;ficha();
+document.getElementById("botao1").setAttribute("onclick"," p04r01()");
+document.getElementById("botao1").innerHTML = "continuar para academia";
+document.getElementById("botao2").setAttribute("style","visibility:hidden");
+document.getElementById("botao3").setAttribute("style","visibility:hidden");
+}
+function p04r01(){
+document.getElementById("console1").innerHTML = "STO NA AKDMIA";
+grana=0;ficha();
+document.getElementById("botao1").setAttribute("onclick"," p04r01()");
+document.getElementById("botao1").innerHTML = "to bi continuédi";
+document.getElementById("botao2").setAttribute("style","visibility:hidden");
+document.getElementById("botao3").setAttribute("style","visibility:hidden");
+}
 </script>
-
-
-
-
 </body>
 </html>
-
-
-
-
-
-
-
