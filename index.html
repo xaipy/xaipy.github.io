@@ -68,12 +68,18 @@
 <br>
 <br>
 <button class="button" id="botao3" onclick="p01r02()" style="visibility:hidden">NÃO</button>
+<br>
+<br>
+<br>
+<br>
+<br>
+<button class="button" id="botao4" onclick="p01r02()" style="visibility:hidden">NÃO</button>
 </div>
 <script>
 //////////////////////////////////////variaveis////////////////////////////////////
-var afo = 10;
-var aao = 10;
-var aso = 10;
+var afo = 1;
+var aao = -2;
+var aso = 5;
 var wey = 0;
 var grana = 5;
 ////variaveis quest
@@ -95,7 +101,7 @@ document.getElementById("tela5").innerHTML = "Bufunfa: " + grana + " Way protei:
 document.getElementById("console1").innerHTML = "VOCE TOMOU UM CAFEH DA MANHA REFORSSADO?" ;
 ////////////////FUNCOES///
 
-//////p1
+///////////////////////////////////////////////////////////////////////p1
 function p01r01(){
 document.getElementById("console1").innerHTML = "PORRA ENTAO VAMOS MALHAR! O que você vai levar pra academia?";
 document.getElementById("botao1").setAttribute("onclick"," p02r01()");
@@ -109,13 +115,11 @@ afo+=1;aao+=1;aso+=1;ficha();
 }
 function p01r02(){
 document.getElementById("console1").innerHTML = "GAME OVER!! voce eh muinto fracasado!";
-document.getElementById("botao1").setAttribute("onclick","");
-document.getElementById("botao1").innerHTML = "lixento...";
-document.getElementById("botao2").setAttribute("onclick","");
-document.getElementById("botao2").innerHTML = "lixento...";
-afo+=-5;aao+=-5;aso+=-5;ficha();
+document.getElementById("botao1").setAttribute("style","visibility:hidden");
+document.getElementById("botao2").setAttribute("style","visibility:hidden");
+afo+=-1;aao+=-1;aso+=-1;ficha();
 }
-/////////////p2
+////////////////////////////////////////////////////////////////////////p2
 function p02r01(){
 document.getElementById("console1").innerHTML = "Você ainda tá muinto frango pra usar a regata fininha...(-1 aparensia). No caminho pra academia um mendigo aparece armado com um tijolo baiano de 8 furo e diz: pasa a grana plaiso.";
 aao+=-1;ficha();
@@ -142,7 +146,7 @@ document.getElementById("botao1").innerHTML = "continuar";
 document.getElementById("botao2").setAttribute("style","visibility:hidden");
 document.getElementById("botao3").setAttribute("style","visibility:hidden");
 }
-///////////p3
+/////////////////////////////////////////////////////////////////////p3
 function p03r01(){
 document.getElementById("console1").innerHTML = "Ta locao mermao? vc ta framgo aimda. mindigo te da um pau e leva sua grana.";
 aso+=-3;grana=0;ficha();
@@ -159,14 +163,23 @@ document.getElementById("botao1").innerHTML = "continuar para academia";
 document.getElementById("botao2").setAttribute("style","visibility:hidden");
 document.getElementById("botao3").setAttribute("style","visibility:hidden");
 }
+//////////////////////////////////////////////////////////////p4
 function p04r01(){
-document.getElementById("console1").innerHTML = "STO NA AKDMIA";
+document.getElementById("console1").innerHTML = "STO NA AKDMIA. Vo comessa:";
 grana=0;ficha();
-document.getElementById("botao1").setAttribute("onclick"," p04r01()");
-document.getElementById("botao1").innerHTML = "to bi continuédi";
-document.getElementById("botao2").setAttribute("style","visibility:hidden");
-document.getElementById("botao3").setAttribute("style","visibility:hidden");
+document.getElementById("botao2").setAttribute("style","visibility:show");
+document.getElementById("botao3").setAttribute("style","visibility:show");
+document.getElementById("botao1").setAttribute("onclick"," p05r01()");
+document.getElementById("botao1").innerHTML = "ÇUPINÃO (custa 1 saude; aumenta forsa)";
+document.getElementById("botao2").setAttribute("onclick"," p05r02()");
+document.getElementById("botao2").innerHTML = "Stera, to muinto panssudo rs(custa 1 saude)";
+document.getElementById("botao3").setAttribute("onclick"," p05r03()");
+document.getElementById("botao3").innerHTML = "vo conversa cas mina. (nao custa nada)";
+document.getElementById("botao4").setAttribute("style","visibility:show");
+document.getElementById("botao4").setAttribute("onclick"," p05r04()");
+document.getElementById("botao4").innerHTML = "chega vo pa caza...";
 }
+//////////////////////////////////////////////////////////////////////p5
 </script>
 </body>
 </html>
