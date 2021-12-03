@@ -85,6 +85,7 @@ var aso = 5;
 var wey = 0;
 var grana = 5;
 var hora = 6; // de 00 a 24
+    var p05r03 =0;
 ////variaveis quest
 aifone=1;
 //////////////////////////////////////////////TEXTO FICHA esttico inciial + dinamico
@@ -184,7 +185,16 @@ document.getElementById("botao4").innerHTML = "chega vo pa caza...";
 }
 //////////////////////////////////////////////////////////////////////p5
     function p05r03(){
-document.getElementById("console1").innerHTML = "papo vai papo vem e vc frangao dese geito nao vai come ninguem... e agora?("+hora+":00)";
+if(var p05r03 ==0){
+        document.getElementById("console1").innerHTML = "papo vai papo vem e vc frangao dese geito nao vai come ninguem... e agora?("+hora+":00)";
+}else if (var p05r03 ==1){
+        document.getElementById("console1").innerHTML = "sua auto istima é empresionante. e agora?("+hora+":00)";
+}(var p05r03 ==2){
+        document.getElementById("console1").innerHTML = "cerio, vc nau vai come ninguem e agora?("+hora+":00)";
+}(var p05r03 >=3){
+        document.getElementById("console1").innerHTML = "vc consigiu cer preso por asedio";
+}
+var p05r03 +=1;
 hora+=1;
 ficha();
 document.getElementById("botao2").setAttribute("style","visibility:show");
