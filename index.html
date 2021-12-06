@@ -176,6 +176,7 @@ document.getElementById("botao2").setAttribute("style","visibility:hidden");
 document.getElementById("botao3").setAttribute("style","visibility:hidden");
 }
 //////////////////////////////////////////////////////////////p4
+var minacounter=0;
 function p04r01(){
    
 document.getElementById("console1").innerHTML = "STO NA AKDMIA. Vo comessa ("+hora+":00)";
@@ -187,10 +188,17 @@ document.getElementById("botao1").innerHTML = "ÇUPINÃO (custa 1 energia; aumen
 document.getElementById("botao2").setAttribute("onclick"," p05r02()");
 document.getElementById("botao2").innerHTML = "Stera, to muinto panssudo rs(custa 1 energia; aumenta saude)";
 document.getElementById("botao3").setAttribute("onclick"," p05r03()");
+if(minacounter ==0){
 document.getElementById("botao3").innerHTML = "vo conversa cas mina. (nao custa nada)";
+}else{
+document.getElementById("botao3").innerHTML = "as mina curte un ome desidido";
+}
 document.getElementById("botao4").setAttribute("style","visibility:show");
 document.getElementById("botao4").setAttribute("onclick"," p05r04()");
+
+
 document.getElementById("botao4").innerHTML = "chega vo pa caza...";
+
 }
 //////////////////////////////////////////////////////////////////////p5
 function p05r01(){
@@ -205,6 +213,7 @@ function p05r02(){
 }
 function p05r03(){
     hora++;
+	minacounter++;
   p04r01();
 }
     
