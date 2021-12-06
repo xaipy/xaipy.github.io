@@ -88,9 +88,11 @@
 </div>
 <script>
 //////////////////////////////////////variaveis////////////////////////////////////
-var afo = 1;
+var afo = 1; 
 var aao = -2;
-var aso = 5;
+var aso = 3;
+var energiaMAX = 3; 
+var energia = 3; 
 var wey = 0;
 var grana = 5;
 var hora = 6; // de 00 a 24
@@ -103,7 +105,7 @@ function ficha(){
 document.getElementById("tela1").innerHTML = "SHAIPE BRODERS v.1";
 document.getElementById("tela2").innerHTML = "FORSA " + afo;
 document.getElementById("tela3").innerHTML = "Aparensia " +aao;
-document.getElementById("tela4").innerHTML = "Vigor " + aso;
+document.getElementById("tela4").innerHTML = "SAUDE " + aso + " ENERGIA " + energia +" / " + energiaMAX ;
 document.getElementById("tela5").innerHTML = "Bufunfa: " + grana + " Way protei: " + wey;
 }
 //////////////////////////////////////////////TEXTO EQUIPAMENTO///////////////////
@@ -185,7 +187,7 @@ document.getElementById("botao3").setAttribute("style","visibility:show");
 document.getElementById("botao1").setAttribute("onclick"," p05r01()");
 document.getElementById("botao1").innerHTML = "ÇUPINÃO (custa 1 energia; aumenta forsa)";
 document.getElementById("botao2").setAttribute("onclick"," p05r02()");
-document.getElementById("botao2").innerHTML = "Stera, to muinto panssudo rs(custa 1 energia; aumenta Vigor)";
+document.getElementById("botao2").innerHTML = "Stera, to muinto panssudo rs(custa 1 energia; aumenta saude)";
 document.getElementById("botao3").setAttribute("onclick"," p05r03()");
 document.getElementById("botao3").innerHTML = "vo conversa cas mina. (nao custa nada)";
 document.getElementById("botao4").setAttribute("style","visibility:show");
@@ -193,7 +195,23 @@ document.getElementById("botao4").setAttribute("onclick"," p05r04()");
 document.getElementById("botao4").innerHTML = "chega vo pa caza...";
 }
 //////////////////////////////////////////////////////////////////////p5
-
+function p05r01(){
+    hora++;
+    energia--;
+    document.getElementById("console1").innerHTML = "STO NA AKDMIA. Vo comessa ("+hora+":00)";
+ficha();
+document.getElementById("botao2").setAttribute("style","visibility:show");
+document.getElementById("botao3").setAttribute("style","visibility:show");
+document.getElementById("botao1").setAttribute("onclick"," p05r01()");
+document.getElementById("botao1").innerHTML = "ÇUPINÃO (custa 1 energia; aumenta forsa)";
+document.getElementById("botao2").setAttribute("onclick"," p05r02()");
+document.getElementById("botao2").innerHTML = "Stera, to muinto panssudo rs(custa 1 energia; aumenta saude)";
+document.getElementById("botao3").setAttribute("onclick"," p05r03()");
+document.getElementById("botao3").innerHTML = "vo conversa cas mina. (nao custa nada)";
+document.getElementById("botao4").setAttribute("style","visibility:show");
+document.getElementById("botao4").setAttribute("onclick"," p05r04()");
+document.getElementById("botao4").innerHTML = "chega vo pa caza...";
+}
     
     ///////////////////////////////////////////////////////////////////p6
 </script>
