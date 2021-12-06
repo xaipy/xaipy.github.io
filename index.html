@@ -102,7 +102,7 @@ function ficha(){
 document.getElementById("tela1").innerHTML = "SHAIPE BRODERS v.1";
 document.getElementById("tela2").innerHTML = "FORSA " + afo;
 document.getElementById("tela3").innerHTML = "Aparensia " +aao;
-document.getElementById("tela4").innerHTML = "SAUDE " + aso + " ENERGIA " + energia +" / " + energiaMAX ;
+document.getElementById("tela4").innerHTML = "SAUDE " + aso + " ENERJIA " + energia +" / " + energiaMAX ;
 document.getElementById("tela5").innerHTML = "Bufunfa: " + grana + " Way protei: " + wey;
 }
 //////////////////////////////////////////////TEXTO EQUIPAMENTO///////////////////
@@ -184,14 +184,16 @@ ficha();
 document.getElementById("botao2").setAttribute("style","visibility:show");
 document.getElementById("botao3").setAttribute("style","visibility:show");
 document.getElementById("botao1").setAttribute("onclick"," p05r01()");
-document.getElementById("botao1").innerHTML = "ÇUPINÃO (custa 1 energia; aumenta forsa)";
+document.getElementById("botao1").innerHTML = "ÇUPINÃO (-1 enerjia/+forsa)";
 document.getElementById("botao2").setAttribute("onclick"," p05r02()");
-document.getElementById("botao2").innerHTML = "Stera, to muinto panssudo rs(custa 1 energia; aumenta saude)";
+document.getElementById("botao2").innerHTML = "Stera, to muinto panssudo rs(-1 enerjia/+saude)";
 document.getElementById("botao3").setAttribute("onclick"," p05r03()");
 if(minacounter ==0){
 document.getElementById("botao3").innerHTML = "vo conversa cas mina. (nao custa nada) " +minacounter;
+}if(minacounter ==1){
+document.getElementById("botao3").innerHTML = "as mina curte un ome desidido"; +minacounter;
 }else{
-document.getElementById("botao3").innerHTML = "as mina curte un ome desidido";
+document.getElementById("botao3").innerHTML = "elas gosta q mexe no cabelo delas";
 }
 document.getElementById("botao4").setAttribute("style","visibility:show");
 document.getElementById("botao4").setAttribute("onclick"," p05r04()");
