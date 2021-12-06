@@ -183,13 +183,13 @@ function p04r01(){
 
 
 ficha();
-if(minacounter ==0){
+if(minacounter<1){
 document.getElementById("console1").innerHTML = "STO NA AKDMIA. Vo comessa ("+hora+":00)" +minacounter;
 document.getElementById("botao3").innerHTML = "vo conversa cas mina" ;
 }if(minacounter ==1){
 document.getElementById("console1").innerHTML = "papo vai papo ven e o frangao nau vai come ninguen. e agora? ("+hora+":00)" +minacounter;
 document.getElementById("botao3").innerHTML = "as mina curte un ome desidido" ;
-}if(minacounter ==2){
+}if(minacounter >1){
 document.getElementById("console1").innerHTML = "framgo e buro, vc soh tah si invergonhanu. e agora ("+hora+":00)" +minacounter;
 document.getElementById("botao3").innerHTML = "elas gosta q mexe no cabelo delas";
 }else {
@@ -223,7 +223,7 @@ function p05r02(){
 function p05r03(){
     hora++;
 	minacounter++;
-	if(minacounter <2){
+	if(minacounter <=2){
     p04r01();
 	}else{
 	p05r05()
