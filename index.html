@@ -96,6 +96,7 @@ var hora = 6; // de 00 a 24
  //   var p05r03 =0;
 ////variaveis quest
 var aifone=1;
+var minacounter=0;
 //////////////////////////////////////////////TEXTO FICHA esttico inciial + dinamico
 
 function ficha(){
@@ -176,19 +177,12 @@ document.getElementById("botao2").setAttribute("style","visibility:hidden");
 document.getElementById("botao3").setAttribute("style","visibility:hidden");
 }
 //////////////////////////////////////////////////////////////p4
-var minacounter=0;
+
 function p04r01(){
    
 
 
 ficha();
-document.getElementById("botao2").setAttribute("style","visibility:show");
-document.getElementById("botao3").setAttribute("style","visibility:show");
-document.getElementById("botao1").setAttribute("onclick"," p05r01()");
-document.getElementById("botao1").innerHTML = "ÇUPINÃO";
-document.getElementById("botao2").setAttribute("onclick"," p05r02()");
-document.getElementById("botao2").innerHTML = "Stera, to muinto panssudo rs";
-document.getElementById("botao3").setAttribute("onclick"," p05r03()");
 if(minacounter ==0){
 document.getElementById("console1").innerHTML = "STO NA AKDMIA. Vo comessa ("+hora+":00)" +minacounter;
 document.getElementById("botao3").innerHTML = "vo conversa cas mina" ;
@@ -198,10 +192,18 @@ document.getElementById("botao3").innerHTML = "as mina curte un ome desidido" ;
 }if(minacounter ==2){
 document.getElementById("console1").innerHTML = "framgo e buro, vc soh tah si invergonhanu. e agora ("+hora+":00)" +minacounter;
 document.getElementById("botao3").innerHTML = "elas gosta q mexe no cabelo delas";
-}else{
+}else {
 document.getElementById("console1").innerHTML = "STO NA AKDMIA. Vo comessa ("+hora+":00)" +minacounter;
 document.getElementById("botao3").innerHTML = "vo conversa cas mina. (nao custa nada) " ;
 }
+document.getElementById("botao2").setAttribute("style","visibility:show");
+document.getElementById("botao3").setAttribute("style","visibility:show");
+document.getElementById("botao1").setAttribute("onclick"," p05r01()");
+document.getElementById("botao1").innerHTML = "ÇUPINÃO";
+document.getElementById("botao2").setAttribute("onclick"," p05r02()");
+document.getElementById("botao2").innerHTML = "Stera, to muinto panssudo rs";
+document.getElementById("botao3").setAttribute("onclick"," p05r03()");
+
 document.getElementById("botao4").setAttribute("style","visibility:show");
 document.getElementById("botao4").setAttribute("onclick"," p05r04()");
 document.getElementById("botao4").innerHTML = "chega vo pa caza...";
