@@ -85,9 +85,9 @@
 </div>
 <script>
 //////////////////////////////////////variaveis////////////////////////////////////
-var afo = 1; 
-var aao = -2;
-var aso = 3;
+var forsa = 1; 
+var aparensia = -2;
+var saude = 3;
 var energiaMAX = 3; 
 var energia = 3; 
 var wey = 0;
@@ -100,10 +100,10 @@ var minacounter=0;
 //////////////////////////////////////////////TEXTO FICHA esttico inciial + dinamico
 
 function ficha(){
-document.getElementById("tela1").innerHTML = "SHAIPE BRODERS v.1";
-document.getElementById("tela2").innerHTML = "FORSA " + afo;
-document.getElementById("tela3").innerHTML = "Aparensia " +aao;
-document.getElementById("tela4").innerHTML = "SAUDE " + aso + " ENERJIA " + energia +" / " + energiaMAX ;
+document.getElementById("tela1").innerHTML = "SHAIPE BRODERS v.1.1";
+document.getElementById("tela2").innerHTML = "FORSA " + forsa;
+document.getElementById("tela3").innerHTML = "Aparensia " +aparensia;
+document.getElementById("tela4").innerHTML = "SAUDE " + saude + " ENERJIA " + energia +" / " + energiaMAX ;
 document.getElementById("tela5").innerHTML = "Bufunfa: " + grana + " Way protei: " + wey;
 }
 //////////////////////////////////////////////TEXTO EQUIPAMENTO///////////////////
@@ -120,7 +120,7 @@ document.getElementById("botao2").innerHTML = "way protei";
 document.getElementById("botao3").setAttribute("onclick","p02r03()");
 document.getElementById("botao3").innerHTML = "aifone para selfes";
 document.getElementById("botao3").setAttribute("style","visibility:show");
-afo+=1;aao+=1;aso+=1;ficha();
+ficha();
 document.getElementById("intro").setAttribute("style","visibility:hidden");
 document.getElementById("intro").setAttribute("src=","");
 }
@@ -128,7 +128,7 @@ function p01r02(){
 document.getElementById("console1").innerHTML = "GAME OVER!! voce eh muinto fracasado!";
 document.getElementById("botao1").setAttribute("style","visibility:hidden");
 document.getElementById("botao2").setAttribute("style","visibility:hidden");
-afo+=-1;aao+=-1;aso+=-1;ficha();
+ficha();
 document.getElementById("intro").setAttribute("style","visibility:hidden");
 document.getElementById("intro").setAttribute("src=","");
 }
@@ -210,11 +210,13 @@ document.getElementById("botao4").innerHTML = "chega vo pa caza...";
 function p05r01(){
     hora++;
     energia--;
+	forsa+= 0.1f;
     p04r01();
 }
 function p05r02(){
     hora++;
     energia--;
+	saude+=0.1f;
     p04r01();
 }
 function p05r03(){
